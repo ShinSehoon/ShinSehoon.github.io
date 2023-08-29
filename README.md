@@ -1,1 +1,0 @@
-# ShinSehoon.github.io
