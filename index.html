@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>창업 수익 계산기</title>
+</head>
+
+<body>
+  <header>
+    <div class="topnav">
+        <a href="https://k-franchise.or.kr/home/main"><img src="https://k-franchise.or.kr/images/logo.png" alt="K 프랜차이즈 로고"></a>
+      <span class="space">
+          <a href="https://k-franchise.or.kr/brand/main">브랜드 홍보관</a>
+          <a href="https://m.nicebizmap.co.kr/kfa/analysis">상권 분석</a>
+          <a href="https://kfa.imweb.me/">매장 실습</a>
+          <a href="https://k-franchise.or.kr/edu/main">전문 교육</a>
+          <a href="https://k-franchise.or.kr/field/main">비즈마켓</a>
+          <a class="end" href="//www.k-franchise.or.kr/fsquare/main">프랜차이즈 스퀘어</a>
+      </span>
+      <a id="login" href="https://k-franchise.or.kr/home/login">로그인</a>
+  </div>
+  </header>
+  
+  <main>
+    <div class="block1">
+      <ul>
+          <li>평균 예상 매출과 지출 비용은 통계 자료에 근거합니다. </li>
+          <li>감가상각비, 세금, 점주 인건비를 고려하지 않습니다. </li>
+          <li>실제 창업 조건과 환경에 따라 오차가 발생할 수 있습니다. </li>
+          <li>수익 계산기는 참고용으로만 이용하시기 바랍니다.</li>
+        </ul>
+  </div>
+
+    <form id="block2">
+      <label for="monthly-sales">예상 판매액 (원)</label>
+      <input type="text" id="monthly-sales" required>
+      <p class="note">커피 업종 평균 월 매출액은 <span class="highlight">1,700만원</span>입니다</p>
+      
+      <label for="costs">원가 (원)</label>
+      <input type="text" id="costs" required>
+      <p class="note">커피 업종 평균 원가는 매출의 <span class="highlight">36%</span>입니다</p>
+      
+      <label for="employee-salaries">직원 급여 (원)</label>
+      <input type="text" id="employee-salaries" required>
+      <p class="note">커피 업종 평균 급여는 매출의 <span class="highlight">20%</span>입니다</p>
+
+      <label for="rent">임대료 (원)</label>
+      <input type="text" id="rent" required>
+      <p class="note">커피 업종 평균 임대료는 매출의 <span class="highlight">15%</span>입니다</p>
+
+      <label for="admin-expenses">관리비 (원)</label>
+      <input type="text" id="admin-expenses" required>
+      <p class="note">커피 업종 평균 관리비는 매출의 <span class="highlight">3%</span>입니다</p>
+
+      <label for="sales-commissions">판매 수수료 (원)</label>
+      <input type="text" id="sales-commissions" required>
+      <p class="note">커피 업종 평균 판매 수수료는 매출의 <span class="highlight">3%</span>입니다</p>
+      
+      <div class="button-container">
+      <button type="button" id="reset-button">초기화</button>
+      <button type="button" id="calculate-button">계산하기</button>   
+      </div>
+    </form>
+
+    <div id="result" class="hidden">
+      <h2>예상 수익:</h2>
+      <p id="income-result"></p>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
